@@ -1,1 +1,785 @@
-Welcome to my page!!!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilson Pham - Senior Full-Stack &amp; AI Systems Engineer</title>
+<style>
+  @page {
+    size: A4;
+    margin: 3.5mm 6.8mm 2.2mm 6.8mm;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    line-height: 1.50;
+    font-size: 7.9pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @media screen {
+    body {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      font-size: 10pt;
+    }
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Header */
+  .header {
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 3.5px;
+    margin-bottom: 4.5px;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .name-row {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+  }
+  .name {
+    font-size: 19pt;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .name-vi {
+    font-size: 9.3pt;
+    font-weight: 500;
+    color: #64748b;
+  }
+  .title {
+    font-size: 10.3pt;
+    font-weight: 600;
+    color: #2563eb;
+    margin-top: 1px;
+  }
+  .header-meta {
+    text-align: right;
+    font-size: 7.7pt;
+    color: #475569;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2px;
+    align-items: flex-end;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .remote-badge {
+    background-color: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+    font-size: 6.8pt;
+    font-weight: 600;
+    padding: 0.5px 5px;
+    border-radius: 9999px;
+    margin-left: 2px;
+  }
+  .contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 5px;
+    margin-top: 3.5px;
+    font-size: 7.4pt;
+  }
+  .contact-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: #334155;
+    text-decoration: none;
+    line-height: 1.25;
+  }
+  .contact-chip a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .contact-chip:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+  }
+  .contact-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Section Styles */
+  .section {
+    margin-bottom: 4px;
+  }
+  .section-title {
+    font-size: 9.3pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0f172a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 1.2px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .section-title::before {
+    content: "";
+    display: inline-block;
+    width: 3.5px;
+    height: 10px;
+    background-color: #2563eb;
+    border-radius: 2px;
+  }
+
+  /* Summary */
+  .summary-text {
+    font-size: 8.0pt;
+    color: #334155;
+    text-align: justify;
+    line-height: 1.30;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.2px 8px;
+  }
+  .skill-group {
+    font-size: 7.6pt;
+    line-height: 1.24;
+  }
+  .skill-label {
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .skill-items {
+    color: #334155;
+  }
+
+  /* Subheadings */
+  .sub-heading {
+    font-size: 8.3pt;
+    font-weight: 700;
+    color: #1e40af;
+    background: #eff6ff;
+    padding: 1.2px 4.5px;
+    border-radius: 3px;
+    margin-top: 3.5px;
+    margin-bottom: 2.5px;
+    border-left: 3px solid #3b82f6;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Project Cards */
+  .project-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 3px;
+    padding: 1.5px 4.8px;
+    margin-bottom: 1.3px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+  .project-title {
+    font-size: 8.3pt;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .project-role {
+    font-size: 7.3pt;
+    font-weight: 600;
+    color: #64748b;
+  }
+  .tech-badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5px;
+    margin-bottom: 1.5px;
+  }
+  .tech-badge {
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 6.8pt;
+    font-weight: 500;
+    padding: 0.5px 4px;
+    border-radius: 2.5px;
+    border: 1px solid #e2e8f0;
+    line-height: 1.2;
+  }
+  .tech-badge.highlight {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+    font-weight: 600;
+  }
+  .project-desc {
+    font-size: 7.1pt;
+    color: #334155;
+    margin-bottom: 1px;
+    line-height: 1.50;
+  }
+  .project-bullets {
+    margin-left: 11px;
+    font-size: 7.0pt;
+    color: #334155;
+    line-height: 1.50;
+  }
+  .project-bullets li {
+    margin-bottom: 0.3px;
+  }
+  .project-bullets li strong {
+    color: #0f172a;
+  }
+  .project-footer-link {
+    margin-top: 1.5px;
+    font-size: 7.3pt;
+    line-height: 1.2;
+  }
+  .project-footer-link a {
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .project-footer-link a:hover {
+    text-decoration: underline;
+  }
+  .metric-tag {
+    color: #047857;
+    font-weight: 600;
+    background: #ecfdf5;
+    padding: 0 2px;
+    border-radius: 2px;
+    border: 1px solid #a7f3d0;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-size: 6.9pt;
+    color: #94a3b8;
+    margin-top: 4px;
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-top">
+    <div>
+      <div class="name-row">
+        <h1 class="name">Wilson Pham</h1>
+        <span class="name-vi">&nbsp;(Pham Ngoc Son)</span>
+      </div>
+      <div class="title">Senior Full-Stack &amp; AI Systems Engineer</div>
+    </div>
+    <div class="header-meta">
+      <div class="meta-item">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Ha Noi, Vietnam </span>
+        <span class="remote-badge">Global Remote</span>
+      </div>
+      <div class="meta-item">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <span>English: <strong>TOEIC LR 820 / 990</strong> (Professional Working Proficiency)</span>
+      </div>
+    </div>
+  </div>
+  <div class="contact-bar">
+    <a href="tel:+84934552696" class="contact-chip">
+      <span class="contact-icon"><svg width="10.5" height="10.5" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+      <span>(+84) 934 552 696</span>
+    </a>&nbsp;
+    <a href="mailto:wilsonpham360@gmail.com" class="contact-chip">
+      <span class="contact-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+      <span>wilsonpham360@gmail.com</span>
+    </a>&nbsp;
+    <a href="https://linkedin.com/in/TheWilsonGlobal" class="contact-chip">
+      <span class="contact-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#2563eb"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 0 0 1.64-1.64A1.64 1.64 0 0 0 6.46 5.5a1.64 1.64 0 0 0-1.64 1.62c0 .91.73 1.64 1.64 1.64m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg></span>
+      <span>linkedin.com/in/TheWilsonGlobal</span>
+    </a>&nbsp;
+    <a href="https://github.com/TheWilsonGlobal" class="contact-chip">
+      <span class="contact-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#2563eb"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></span>
+      <span>github.com/TheWilsonGlobal</span>
+    </a>&nbsp;
+    <a href="https://www.npmjs.com/~thewilsonglobal" class="contact-chip">
+      <span class="contact-icon"><svg width="12" height="11" viewBox="0 0 24 24" fill="#2563eb"><path d="M0 7.334v9.332h7.334v-6.666h2.666v6.666h14V7.334H0zm6 8H2.666v-6.666H6v6.666zm8 0h-2.666V8.668H14v6.666zm7.334 0h-2.668v-4h-2.666v4H16.67V8.668h4.664v6.666z"/></svg></span>
+      <span>npmjs.com/~thewilsonglobal</span>
+    </a>&nbsp;
+    <a href="https://kaggle.com/TheWilsonGlobal" class="contact-chip">
+      <span class="contact-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#2563eb"><path d="M18.825 23.859c-.022.046-.057.085-.1.112s-.096.029-.145.029h-3.48a.48.48 0 0 1-.39-.18l-5.46-7.05-1.5 1.44v5.49a.3.3 0 0 1-.3.3H4.8a.3.3 0 0 1-.3-.3V.3a.3.3 0 0 1 .3-.3h2.65a.3.3 0 0 1 .3.3v13.62l6.63-6.66a.48.48 0 0 1 .36-.16h3.63a.3.3 0 0 1 .27.42l-6.84 6.84 7.02 9.09a.3.3 0 0 1-.005.409z"/></svg></span>
+      <span>kaggle.com/TheWilsonGlobal</span>
+    </a>&nbsp;
+    <a href="https://leetcode.com/u/TheWilsonGlobal" class="contact-chip">
+      <span class="contact-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#2563eb"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .666-1.789L9.4 8.012l4.896-5.24a1.38 1.38 0 0 0-.813-2.772zm2.518 10.781H8.701a1.379 1.379 0 0 0 0 2.758h7.3a1.379 1.379 0 0 0 0-2.758z"/></svg></span>
+      <span>leetcode.com/u/TheWilsonGlobal</span>
+    </a>
+  </div>
+</header>
+
+<!-- Professional Summary -->
+<section class="section">
+  <h2 class="section-title">Professional Summary</h2>
+  <p class="summary-text">
+    <strong>Senior Full-Stack &amp; AI Systems Engineer</strong> with over a decade of engineering foundation spanning distributed microservices and production AI platforms. Proven track record in designing cost-effective <strong>LLM guardrails</strong>, authoring multi-engine <strong>GraphRAG</strong> retrieval pipelines, and architecting autonomous coding agents inside hardened <strong>Docker and MCP sandboxes</strong>. Deep expertise building event-driven backend services with <strong>Go and Node.js</strong>, developing reactive <strong>Next.js and React</strong> interfaces, and engineering low-level storage engines with vector indexing. Blends strong systems architecture with robust edge AI workflows to deliver resilient, secure, and <strong>high-throughput enterprise solutions</strong>.
+  </p>
+</section>
+
+<!-- Technical Skills -->
+<section class="section">
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <span class="skill-label">Full-Stack &amp; Web Architecture:</span>
+      <span class="skill-items">Next.js 14-16 (SSR &amp; App Router), React 18/19, TypeScript, Vite, Tailwind CSS 4, Radix UI, TanStack Query, Zustand, Chrome Extension Manifest V3, WebSockets, REST &amp; GraphQL APIs.</span>
+    </div>
+    <div class="skill-group">
+      <span class="skill-label">Backend &amp; Distributed Microservices:</span>
+      <span class="skill-items">Fastify 4/5, NestJS 10/11, Express, FastAPI (Python), Go (Golang 1.22+, Chi, Watermill), Redis, BullMQ (Delayed Queues &amp; Worker Pools), Apache Kafka / Redpanda, Distributed Sagas, Reverse Proxies, Domain-Driven Design (DDD).</span>
+    </div>
+    <div class="skill-group">
+      <span class="skill-label">Vibe Coding &amp; Coding Agents:</span>
+      <span class="skill-items">Advanced agentic workflows with Claude Code, Codex, Antigravity (Skills, Agents, MCP servers, Plugins, Rules, Hooks, Sidecars, automated test/lint feedback loops &amp; self-correction).</span>
+    </div>
+    <div class="skill-group">
+      <span class="skill-label">AI/ML &amp; LLM Guardrails:</span>
+      <span class="skill-items">ModernBERT, Llama Guard 3 1B, ONNX Runtime (DirectML/CPU), Vulkan GGUF, Fast-Slow Dual-Process Guardrails, Calibrated Confidence Routing, PyTorch DDP, Discrete Diffusion Models, RLCD, CLM.</span>
+    </div>
+    <div class="skill-group">
+      <span class="skill-label">GraphRAG &amp; Knowledge Retrieval:</span>
+      <span class="skill-items">PathRAG, LightRAG, HippoRAG (Personalized PageRank), Standard GraphRAG, RAPTOR, ToG (Think-on-Graph), GCN, Louvain Clustering, Knowledge Graph Entity-Relationship Extraction.</span>
+    </div>
+    <div class="skill-group">
+      <span class="skill-label">Computer Vision &amp; Multimodal VLM:</span>
+      <span class="skill-items">LiquidAI LFM2.5-VL, YOLO26-Pose, YOLO26-Seg, DirectML GPU Acceleration (AMD Radeon), OpenCV, Anatomical Sub-Crop Extraction, Video Management Systems (VMS), Frame Telemetry.</span>
+    </div>
+    <div class="skill-group">
+      <span class="skill-label">Database Internals &amp; Storage Engines:</span>
+      <span class="skill-items">CongraphDB (Author), Columnar Storage, HNSW Vector Indexing (<span class="metric-tag">297x batch speedup</span>), Write-Ahead Logging (WAL) ACID, <code style="font-size:7.2pt">memmap2</code> Zero-Copy I/O, Neo4j (GDS Certified), PostgreSQL 16 (pgx/v5), Drizzle ORM, Prisma.</span>
+    </div>
+    <div class="skill-group">
+      <span class="skill-label">Big Data, Cloud &amp; DevOps:</span>
+      <span class="skill-items">Apache Spark 3.5+, PySpark, Spark MLlib, Kubernetes (k3d), MinIO S3, Medallion Parquet (Bronze/Silver/Gold), Docker Compose (Profile-Gated), Prometheus, Grafana, Loki.</span>
+    </div>
+    <div class="skill-group" style="grid-column: span 2;">
+      <span class="skill-label">Blockchain and Smart contract:</span>
+      <span class="skill-items">Solidity (0.8.x), OpenZeppelin (ERC20/721, Upgradeable Proxies), Foundry DeFi security audits, GMX-style real-yield multi-token staking, RAsset fractionalization, Circom zk-SNARKs (Groth16), ethers.js v6.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Key Projects -->
+<section class="section">
+  <h2 class="section-title">Key Projects &amp; AI Systems Architecture</h2>
+
+  <!-- AI, ML and Agent -->
+  <div class="sub-heading">AI, ML and Agent</div>
+
+  <!-- 1. KahnemanGuard -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">1. KahnemanGuard — Dual-Process Fast-Slow LLM Guardrail Architecture</span>
+      <span class="project-role">Creator &amp; Lead Architect</span>
+    </div>
+    <div class="project-desc">
+      A high-throughput LLM guardrail system inspired by Daniel Kahneman's <em>Thinking, Fast and Slow</em> (VNU-HCM Master's Research), resolving the latency vs. security trade-off through a dual-process cascaded inference pipeline (<span class="metric-tag">90.4% compute cost savings</span>, <span class="metric-tag">99.2%–99.6% DSR</span>, <span class="metric-tag">0.0% FPR</span>).
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Tier 1 (Fast Loop):</strong> Fine-tuned ModernBERT INT8 ONNX encoder classifying safety in <span class="metric-tag">57.3ms CPU P50</span> (P99: 63.0ms) with a 95.2% fast decision rate.</li>
+      <li><strong>Calibrated Routing (τ = 0.80):</strong> Dual-threshold routing (<code style="font-size:7.2pt">τ_safe</code>, <code style="font-size:7.2pt">τ_unsafe</code>, T=1.9665) resolving high-confidence requests immediately.</li>
+      <li><strong>Tier 2 (Deep Loop):</strong> Vulkan-accelerated GGUF <code style="font-size:7.2pt">Llama-Guard-3-1B</code> triggered conditionally on uncertainty (only 4.8% escalation rate for Dense, 5.2% for Diffusion-RLCD).</li>
+      <li><strong>1,140 Academic Sample Matrix:</strong> Verified on JailbreakBench, ToxicChat, BeaverTails, and XSTest: Dense yields <strong>99.2% DSR</strong> / <strong>0.0% FPR</strong> / Brier 0.0712; Diffusion yields <strong>99.6% DSR</strong>; Diffusion-RLCD yields <strong>99.4% DSR</strong> / 81.2ms P50.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">Python</span>
+      <span class="tech-badge highlight">ModernBERT (INT8 ONNX)</span>
+      <span class="tech-badge highlight">Llama-Guard-3-1B (Vulkan)</span>
+      <span class="tech-badge">DirectML</span>
+      <span class="tech-badge">FastAPI</span>
+      <span class="tech-badge">Discrete Diffusion</span>
+      <span class="tech-badge">RLCD</span>
+      <span class="tech-badge">PyTorch DDP</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://github.com/TheWilsonGlobal/kahneman-guard"><strong>[github: kahneman-guard]</strong></a>
+    </div>
+  </div>
+
+  <!-- 2. CongraphRAG -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">2. CongraphRAG — Unified Multi-Engine GraphRAG Framework</span>
+      <span class="project-role">Author &amp; Core Developer</span>
+    </div>
+    <div class="project-desc">
+      A modular, operator-based GraphRAG execution framework providing native support for 8 GraphRAG retrieval engines backed by ConGraphDB hybrid graph-vector storage.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Multi-Engine Orchestration:</strong> Unified execution across PathRAG, LightRAG (dual-level retrieval), HippoRAG (hippocampal associative memory with Personalized PageRank), Standard GraphRAG, RAPTOR (chunk tree summarization), and ToG.</li>
+      <li><strong>Atomic Operator Architecture:</strong> 16+ composable pipeline operators covering entity extraction, edge scoring, and hierarchical community summaries.</li>
+      <li><strong>Quality Assurance:</strong> 290+ automated unit &amp; integration tests verifying graph query determinism and retrieval accuracy across benchmark datasets.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">TypeScript</span>
+      <span class="tech-badge highlight">ConGraphDB</span>
+      <span class="tech-badge">PathRAG</span>
+      <span class="tech-badge">LightRAG</span>
+      <span class="tech-badge">HippoRAG</span>
+      <span class="tech-badge">Standard GraphRAG</span>
+      <span class="tech-badge">RAPTOR</span>
+      <span class="tech-badge">ToG</span>
+      <span class="tech-badge">Vitest</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://www.npmjs.com/package/congraph-rag"><strong>[npm: congraph-rag]</strong></a>
+    </div>
+  </div>
+
+  <!-- 3. Auto-Heal Sandbox Agent -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">3. Auto-Heal Sandbox Agent — Autonomous Code-Repair &amp; Sandboxed Evaluation</span>
+      <span class="project-role">Creator &amp; Lead Architect</span>
+    </div>
+    <div class="project-desc">
+      Local-first autonomous code-repair agent running closed-loop diagnose-patch-execute loops inside hardened, isolated Docker sandboxes powered by edge SLMs.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Closed-Loop Healing:</strong> LangGraph state graph evaluating test failures, generating candidate code patches, and iteratively verifying execution with zero human intervention.</li>
+      <li><strong>Hardened Docker Sandbox:</strong> Ephemeral sandbox (<code style="font-size:7.2pt">user="nobody"</code>, 512MB RAM, 1 CPU core, network isolation <code style="font-size:7.2pt">none</code>, in-memory tarfile injection, 10s execution timeout).</li>
+      <li><strong>Edge SLM Guardrails:</strong> Markdown block regex extraction and 10-line traceback pruning engineered to preserve context windows on local edge SLMs (LiquidAI LFM 2.5 2.6B).</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">Python 3.11+</span>
+      <span class="tech-badge highlight">LangGraph</span>
+      <span class="tech-badge">Docker SDK Sandbox</span>
+      <span class="tech-badge">LiquidAI LFM-2.5 (2.6B Q8)</span>
+      <span class="tech-badge">Pytest</span>
+      <span class="tech-badge">Pydantic</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://github.com/TheWilsonGlobal/auto-heal-sandbox-agent"><strong>[github: auto-heal-sandbox-agent]</strong></a>
+    </div>
+  </div>
+
+  <!-- 4. LexTrade Agent -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">4. LexTrade Agent — Autonomous Trade Compliance &amp; Export Control Agent</span>
+      <span class="project-role">Lead Agentic AI Engineer</span>
+    </div>
+    <div class="project-desc">
+      Autonomous enterprise agent for trade compliance screening, export controls classification, and dual-use audits under EU Regulation 2021/821 and the Wassenaar Arrangement.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Hermes ReAct Plan-and-Solve Loop:</strong> Multi-turn scratchpad reasoning with parallel multi-syntax tool execution and dynamic duplicate suppression.</li>
+      <li><strong>FastMCP Compliance Tools:</strong> Fuzzy token screening against OFAC SDN &amp; EU Consolidated lists, 6-digit HS tariff classification, and multi-category dual-use threshold verification.</li>
+      <li><strong>Hybrid Episodic Memory:</strong> Sliding-window context paired with persistent SQLite non-repudiation audit journal and trigram semantic precedent retrieval.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">Python 3.10+</span>
+      <span class="tech-badge highlight">FastMCP Protocol</span>
+      <span class="tech-badge highlight">Hermes ReAct</span>
+      <span class="tech-badge">SQLite Audit Journal</span>
+      <span class="tech-badge">Trigram Vector Search</span>
+      <span class="tech-badge">LFM-2.5-2.6B</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://github.com/TheWilsonGlobal/lex-trade-agent"><strong>[github: lex-trade-agent]</strong></a>
+    </div>
+  </div>
+
+  <!-- 5. VN-legal -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">5. VN-legal — Vietnam Legal Consultant System</span>
+      <span class="project-role">Lead AI Engineer</span>
+    </div>
+    <div class="project-desc">
+      Intelligent legal consultation platform parsing 689 articles of Vietnam Civil Code into hierarchical clauses and points for semantic retrieval and legal relation discovery.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Dual-Phase Retrieval:</strong> Offline vector search via LanceDB (@xenova/transformers ONNX) paired with embedded ConGraphDB for deep legal clause dependency traversal.</li>
+      <li><strong>High-Performance UI:</strong> Sub-150ms interactive Cytoscape/Sigma.js graph rendering coupled with streamed LLM response generation and exact legal citation anchoring.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">TypeScript</span>
+      <span class="tech-badge highlight">Fastify</span>
+      <span class="tech-badge highlight">React / Vite</span>
+      <span class="tech-badge">ConGraphDB</span>
+      <span class="tech-badge">LanceDB</span>
+      <span class="tech-badge">ONNX Transformers</span>
+      <span class="tech-badge">Cytoscape / Sigma.js</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://github.com/TheWilsonGlobal/vn-legal"><strong>[github: vn-legal]</strong></a>
+    </div>
+  </div>
+
+  <!-- 6. PersonaTrace -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">6. PersonaTrace — Real-Time AI Video Management System &amp; Persona Tracker</span>
+      <span class="project-role">Computer Vision Architect</span>
+    </div>
+    <div class="project-desc">
+      Production AI VMS ingesting live RTSP/video feeds for real-time person tracking and dual-stage attribute classification (heuristic vision + asynchronous VLM reasoning).
+    </div>
+    <ul class="project-bullets">
+      <li><strong>GPU-Accelerated Pose Tracking:</strong> DirectML-accelerated <code style="font-size:7.2pt">YOLO26n-pose</code> running at 14-26ms latency on consumer AMD Radeon GPUs.</li>
+      <li><strong>Dual-Stage Attribute Pipeline:</strong> 40-60 FPS real-time heuristic CV paired with background LiquidAI <code style="font-size:7.2pt">LFM2.5-VL</code> reasoning queues over anatomical crops.</li>
+      <li><strong>Real-Time Telemetry:</strong> Binary JPEG frame streaming over WebSockets paired with synchronized JSON bounding box, trajectory, and keypoint coordinates.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">Python</span>
+      <span class="tech-badge highlight">FastAPI</span>
+      <span class="tech-badge highlight">YOLO26-Pose</span>
+      <span class="tech-badge highlight">LiquidAI LFM2.5-VL</span>
+      <span class="tech-badge">DirectML</span>
+      <span class="tech-badge">OpenCV</span>
+      <span class="tech-badge">TypeScript</span>
+      <span class="tech-badge">WebSockets</span>
+    </div>
+  </div>
+
+  <!-- Distributed Platforms, Infrastructure & Storage Engines -->
+  <div class="sub-heading">Distributed Platforms, Infrastructure &amp; Storage Engines</div>
+
+  <!-- 7. Deworkers -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">7. Deworkers — Distributed Task Orchestration Platform &amp; Multi-Connector Ecosystem</span>
+      <span class="project-role">Lead Platform Architect</span>
+    </div>
+    <div class="project-desc">
+      Enterprise distributed automation platform coordinating multi-tenant background jobs, headless browser workers, and multi-channel API notification connectors.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Multi-Tier Job Scheduling:</strong> Redis-backed BullMQ priority queues with exponential backoff, dead-letter routing, and dynamic worker pool autoscaling.</li>
+      <li><strong>Multi-Connector Integration:</strong> Pluggable notification connectors (Telegram, Discord, Slack, Webhooks, Resend Email) with template compilation and rate limiters.</li>
+      <li><strong>Browser Automation Engine:</strong> Playwright headless contexts executing web extraction and synthetic transactions with persistent session replayability.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px;">
+      <span class="tech-badge highlight">TypeScript</span>
+      <span class="tech-badge highlight">Node.js</span>
+      <span class="tech-badge highlight">BullMQ</span>
+      <span class="tech-badge highlight">Redis</span>
+      <span class="tech-badge">Playwright</span>
+      <span class="tech-badge">Fastify</span>
+      <span class="tech-badge">Docker</span>
+      <span class="tech-badge">Prometheus</span>
+    </div>
+  </div>
+
+  <!-- 8. InfraHub -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">8. InfraHub — Profile-Gated Infrastructure Orchestration Platform</span>
+      <span class="project-role">DevOps &amp; Infrastructure Architect</span>
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Profile-Gated Infrastructure:</strong> Modular Docker Compose topologies isolating lifecycle management across backing services (cache, database, search, storage, and observability).</li>
+      <li><strong>Live-State Introspection API:</strong> Fastify backend continuously inspecting container health, port bindings, resource usage, and storage connectivity with integrated Prometheus/Loki telemetry.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px;">
+      <span class="tech-badge highlight">Docker Compose</span>
+      <span class="tech-badge highlight">Fastify</span>
+      <span class="tech-badge highlight">Redis 7</span>
+      <span class="tech-badge">PostgreSQL</span>
+      <span class="tech-badge">MongoDB</span>
+      <span class="tech-badge">Elasticsearch</span>
+      <span class="tech-badge">Prometheus</span>
+      <span class="tech-badge">Loki</span>
+      <span class="tech-badge">Grafana</span>
+    </div>
+  </div>
+
+  <!-- 9. Microservices -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">9. Event-Driven E-Commerce Microservices</span>
+      <span class="project-role">Microservices Architect</span>
+    </div>
+    <div class="project-desc">
+      Enterprise e-commerce distributed system implementing event-driven Choreography Sagas, polyglot persistence, and high-concurrency order processing.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Choreography Saga Engine:</strong> End-to-end distributed transaction orchestration across Order, Payment, Inventory, and Delivery services via Apache Kafka/Redpanda and BullMQ with automated compensating rollbacks.</li>
+      <li><strong>Polyglot Data Architecture:</strong> SQLite/PostgreSQL 15 (Prisma) transactional core, MongoDB 7 high-flexibility catalog, Elasticsearch 8.11 full-text search, Redis L2 caching, and MinIO S3 object storage.</li>
+      <li><strong>Automated CI/CD &amp; K8s Deployment:</strong> GitHub Actions matrix pipelines &amp; Jenkinsfile for automated testing, multi-service Docker container publishing (GHCR), and Kustomize declarative deployments across Staging and Production.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">Fastify 4</span>
+      <span class="tech-badge highlight">Next.js 14 SSR</span>
+      <span class="tech-badge highlight">React 19 / Vite</span>
+      <span class="tech-badge">Apache Kafka / Redpanda</span>
+      <span class="tech-badge">BullMQ Sagas</span>
+      <span class="tech-badge">Prisma ORM</span>
+      <span class="tech-badge">Postgres / Mongo / ES</span>
+      <span class="tech-badge">CI/CD (Actions &amp; Jenkins)</span>
+      <span class="tech-badge">Kubernetes (Kustomize)</span>
+      <span class="tech-badge">Prometheus / Loki</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://github.com/TheWilsonGlobal/microservices-ecommerce"><strong>[github: microservices-ecommerce]</strong></a>
+    </div>
+  </div>
+
+  <!-- 10. Trading Engine -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">10. Domain-Driven Trading Engine</span>
+      <span class="project-role">Core Systems Architect</span>
+    </div>
+    <div class="project-desc">
+      Low-latency institutional securities trading core in Go implementing pure DDD, in-memory matching, pre-trade purchasing power risk checks, and double-entry bookkeeping.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>In-Memory Matching &amp; O(1) Linked Lists:</strong> Deterministic integer-tick order book (Limit/Market); doubly-linked list price queues ensuring <span class="metric-tag">O(1) order operations &amp; cancellations</span>.</li>
+      <li><strong>Pre-Trade Risk &amp; Double-Entry Balancing:</strong> In-memory purchasing power reservations (Price × Qty × (1 + Fee)) with zero overdrafts; atomic journal vouchers satisfying ∑ Debits = ∑ Credits.</li>
+      <li><strong>Event-Driven Settlement &amp; Web Terminal:</strong> Watermill Kafka/Redpanda pipeline with async PostgreSQL 16 batch settlement (<code style="font-size:7.2pt">pgx.Batch</code>), Redis idempotency, and bilingual React terminal with real-time Level 2 Market Depth.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">Go (Golang 1.22+)</span>
+      <span class="tech-badge highlight">Hexagonal DDD</span>
+      <span class="tech-badge highlight">In-Memory FIFO Matching</span>
+      <span class="tech-badge">Watermill (Kafka / Redpanda)</span>
+      <span class="tech-badge">Double-Entry Ledger</span>
+      <span class="tech-badge">PostgreSQL 16 (pgx/v5)</span>
+      <span class="tech-badge">Redis 7</span>
+      <span class="tech-badge">React Terminal</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://github.com/TheWilsonGlobal/domain-driven-trading"><strong>[github: domain-driven-trading]</strong></a>
+    </div>
+  </div>
+
+  <!-- 11. ClimateBigData -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">11. ClimateBigData — Modernized Cloud-Native Analytics with Spark &amp; Kubernetes</span>
+      <span class="project-role">Big Data Architect</span>
+    </div>
+    <div class="project-desc">
+      Modernization of a legacy 5-tier Hadoop MapReduce architecture into a high-throughput, cloud-native Spark on Kubernetes pipeline processing global climate datasets.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>60x Performance Acceleration:</strong> Reduced processing time from ~26 minutes (Hadoop) to ~26 seconds (Spark), maintaining exact data parity with error delta &lt; 0.00005°C.</li>
+      <li><strong>Medallion Data Lakehouse:</strong> Multi-hop Parquet partitioning (Bronze raw -&gt; Silver cleaned Spark datasets -&gt; Gold analytical aggregates &amp; ML feature sets).</li>
+      <li><strong>Distributed MLlib Forecasting:</strong> Linear &amp; polynomial regression trend forecasting with CO2-temperature correlation models executed on containerized Spark clusters.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px;">
+      <span class="tech-badge highlight">PySpark 3.5</span>
+      <span class="tech-badge highlight">Apache Spark SQL</span>
+      <span class="tech-badge highlight">Spark MLlib</span>
+      <span class="tech-badge">Kubernetes (k3d)</span>
+      <span class="tech-badge">MinIO S3</span>
+      <span class="tech-badge">Parquet</span>
+      <span class="tech-badge">Streamlit</span>
+    </div>
+  </div>
+
+  <!-- 12. CongraphDB -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">12. CongraphDB — Embedded Hybrid Graph-Vector Database</span>
+      <span class="project-role">Database Architect &amp; Author</span>
+    </div>
+    <div class="project-desc">
+      An embedded hybrid graph-vector database engine written in Rust with native Node.js FFI bindings, designed for local-first GraphRAG workloads and low-latency traversal.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Hybrid Graph-Vector Engine:</strong> Dual-representation storage combining columnar graph property tables with SIMD-accelerated HNSW vector indices delivering <span class="metric-tag">297x batch speedup</span>.</li>
+      <li><strong>Storage Internals &amp; ACID Durability:</strong> Zero-copy memory-mapped I/O (<code style="font-size:7.2pt">memmap2</code>), Write-Ahead Logging (WAL) for crash-safe transactions, and Zstandard block compression.</li>
+      <li><strong>FFI Interoperability:</strong> Zero-overhead Node.js/TypeScript bindings via <code style="font-size:7.2pt">napi-rs</code> with typed JavaScript APIs and built-in Cypher-like traversal operators.</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">Rust</span>
+      <span class="tech-badge highlight">napi-rs</span>
+      <span class="tech-badge highlight">Node.js 20+</span>
+      <span class="tech-badge">TypeScript</span>
+      <span class="tech-badge">HNSW Vector Index</span>
+      <span class="tech-badge">Rayon SIMD</span>
+      <span class="tech-badge">WAL (ACID)</span>
+      <span class="tech-badge">memmap2</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://www.npmjs.com/package/congraphdb"><strong>[npm: congraphdb]</strong></a>
+    </div>
+  </div>
+
+  <!-- Blockchain & Smart Contract Systems -->
+  <div class="sub-heading">Blockchain &amp; Smart Contract Systems</div>
+
+  <!-- 13. Blockchain Protocols -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-title">13. Blockchain Protocols, Real-Yield Staking &amp; Security Collection</span>
+      <span class="project-role">Blockchain Protocol Architect</span>
+    </div>
+    <div class="project-desc">
+      Production-grade decentralized finance protocols, real-world asset (RWA) fractionalization engines, real-yield staking architectures, and offensive/defensive smart contract security audits.
+    </div>
+    <ul class="project-bullets">
+      <li><strong>Real-Yield Multi-Token Staking:</strong> Architected GMX-style multi-token reward distribution pools featuring reward routers, fee-tracking contracts, and non-dilutive yield accrual.</li>
+      <li><strong>Real-Asset (RAsset) Tokenization:</strong> Engineered fractionalized asset ownership primitives with transparent upgradeable proxies, buyout auctions, and automated yield settlement.</li>
+      <li><strong>Security Audits &amp; Formal Invariants:</strong> Performed comprehensive security audits with Foundry fuzzing, remediating flash-loan reentrancy, oracle manipulation, and ERC20 fee-on-transfer edge cases across 18+ protocol scenarios (Damn Vulnerable DeFi v4 verified).</li>
+    </ul>
+    <div class="tech-badge-container" style="margin-top: 1.8px; margin-bottom: 1px;">
+      <span class="tech-badge highlight">Solidity 0.8.x</span>
+      <span class="tech-badge highlight">Foundry</span>
+      <span class="tech-badge highlight">Hardhat</span>
+      <span class="tech-badge">OpenZeppelin</span>
+      <span class="tech-badge">Circom zk-SNARKs</span>
+      <span class="tech-badge">snarkjs</span>
+      <span class="tech-badge">ethers.js v6</span>
+    </div>
+    <div class="project-footer-link">
+      <a href="https://github.com/TheWilsonGlobal/damn-vulnerable-defi"><strong>[github: damn-vulnerable-defi]</strong></a>
+    </div>
+  </div>
+</section>
+
+<div class="footer-note">
+  Wilson Pham (Pham Ngoc Son) • Senior Full-Stack &amp; AI Systems Engineer • Updated October 10, 2026
+</div>
+
+</body>
+</html>
