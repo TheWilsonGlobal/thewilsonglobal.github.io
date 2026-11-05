@@ -323,8 +323,11 @@ A fintech ledger platform with an append-only double-entry ledger, multi-source 
 **Architecture Highlights:**
 - **Append-Only Ledger:** zero-sum check before every write; corrections via compensating REV entries, never edits.
 - **Reconciliation:** deterministic matching, then Gemini analysis of fee and FX breaks with one-click posting.
+- **Multi-Agent Workflows:** reconciliation and SAR drafting run as orchestrated agent steps, each checked by a deterministic validator with bounded retries and a per-run trace in the Log Viewer.
 - **Audit & AML:** SHA-256 hash chain with in-browser verifier; structuring detection; two-person approval over $100,000.
-- **Persistence:** one Supabase transaction per request; version-conflict retries; pgTAP tests for RLS and invariants.
+- **Persistence:** write-through to Supabase with an in-memory cache, enabled automatically when configured; one transaction per request; version-conflict retries; pgTAP tests for RLS and invariants.
+
+**Status (Nov 2026):** Active development. Multi-agent workflows, Supabase persistence and the collapsible sidebar UI are committed on `main`; 402 automated tests pass.
 
 **Technology Stack:** TypeScript, Node.js, Express, React, Vite, Tailwind CSS, Google Gemini (`gemini-3.5-flash-lite`), Supabase (PostgreSQL, RLS, RPC), Vitest, pgTAP, Render
 
@@ -423,7 +426,7 @@ Comprehensive blockchain protocol engineering and security defense portfolio spa
 | **CongraphDB** | [https://www.npmjs.com/package/congraphdb](https://www.npmjs.com/package/congraphdb) | Complete columnar storage, HNSW vector indexing, WAL engine, and FFI design |
 | **Everfit Coach Copilot** | [https://github.com/TheWilsonGlobal/everfit-coach-copilot](https://github.com/TheWilsonGlobal/everfit-coach-copilot) | LangGraph copilot, Temporal workflows, polyglot data stores, and ADRs |
 | **Bosun** | [https://github.com/TheWilsonGlobal/bosun](https://github.com/TheWilsonGlobal/bosun) | .NET 10 configurator, agent safety model, SCADA telemetry and evaluation |
-| **LedgerPulse** | [https://github.com/TheWilsonGlobal/ledger-pulse-ai](https://github.com/TheWilsonGlobal/ledger-pulse-ai) | Double-entry ledger, reconciliation, AML radar, hash-chained audit trail and Supabase persistence |
+| **LedgerPulse** | [https://github.com/TheWilsonGlobal/ledger-pulse-ai](https://github.com/TheWilsonGlobal/ledger-pulse-ai) | Double-entry ledger, multi-agent reconciliation, AML radar, hash-chained audit trail and Supabase persistence. Active; 402 tests passing |
 | **Talent Screening** | [https://github.com/TheWilsonGlobal/talent-screening](https://github.com/TheWilsonGlobal/talent-screening) | Polling scoring worker, constrained LLM output and HR review design |
 | **Blockchain SMC** | README.md | Real-yield staking contracts, DeFi vulnerability fixes, and ZK circuits |
 

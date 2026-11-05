@@ -1051,8 +1051,10 @@
             <li><strong>Append-Only Ledger:</strong> zero-sum check before every write; corrections via compensating REV entries, never edits.</li>
             <li><strong>Reconciliation:</strong> deterministic matching, then Gemini analysis of fee and FX breaks with one-click posting.</li>
             <li><strong>Audit &amp; AML:</strong> SHA-256 hash chain with in-browser verifier; structuring detection; two-person approval over $100,000.</li>
-            <li><strong>Persistence:</strong> one Supabase transaction per request; version-conflict retries; pgTAP tests for RLS and invariants.</li>
+            <li><strong>Multi-Agent Workflows:</strong> reconciliation and SAR drafting run as orchestrated agent steps, each checked by a deterministic validator with bounded retries and a per-run trace in the Log Viewer.</li>
+            <li><strong>Persistence:</strong> write-through to Supabase with an in-memory cache, enabled automatically when configured; one transaction per request; version-conflict retries; pgTAP tests for RLS and invariants.</li>
           </ul>
+          <div class="project-desc"><strong>Status (Nov 2026):</strong> Active development. Multi-agent workflows, Supabase persistence and the collapsible sidebar UI are committed on <code>main</code>; 402 automated tests pass.</div>
           <div class="project-bottom">
             <div class="tech-badge-container">
               <span class="tech-badge highlight">TypeScript</span>
